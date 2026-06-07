@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuzzBit - AI Financial Psychology Videos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 24px; 
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { color: #1a1a2e; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+        h1 img { height: 48px; }
+        h2 { color: #2c3e50; margin: 32px 0 16px 0; padding-bottom: 8px; border-bottom: 3px solid #667eea; display: inline-block; }
+        h3 { color: #444; margin: 24px 0 12px 0; }
+        .badge { 
+            background: linear-gradient(135deg, #667eea, #764ba2); 
+            color: white; 
+            padding: 4px 16px; 
+            border-radius: 50px; 
+            font-size: 13px; 
+            font-weight: 600;
+            display: inline-block;
+        }
+        .tech-badge {
+            background: #e8ecf1;
+            color: #2c3e50;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-family: monospace;
+            display: inline-block;
+            margin: 4px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid #667eea;
+        }
+        .feature-card h4 { color: #667eea; margin-bottom: 10px; }
+        .flow-step {
+            display: flex;
+            gap: 16px;
+            margin: 20px 0;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content { flex: 1; }
+        code { background: #1a1a2e; color: #e2e8f0; padding: 2px 8px; border-radius: 6px; font-family: monospace; font-size: 13px; }
+        pre { background: #1a1a2e; color: #e2e8f0; padding: 16px; border-radius: 12px; overflow-x: auto; font-size: 13px; margin: 16px 0; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; text-align: center; color: #666; }
+        a { color: #667eea; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span>🎬</span>
+            BuzzBit
+            <span class="badge">AI-Powered Financial Psychology Platform</span>
+        </h1>
+        <p style="font-size: 18px; color: #555; margin-top: 12px;">Automated short-form video generation about behavioral finance, investing psychology, and cognitive biases.</p>
+
+        <!-- ============================================================ -->
+        <!-- 📱 WHAT IS BUZZBIT -->
+        <!-- ============================================================ -->
+        <h2>📱 What is BuzzBit?</h2>
+        <p>BuzzBit is an <strong>end-to-end automated video generation pipeline</strong> that creates educational short-form content about <strong>financial psychology</strong> and <strong>behavioral finance</strong>. Every day, the system produces videos for YouTube Shorts, TikTok, and YouTube Long-form — in <strong>6 languages</strong> (French, English, Spanish, Arabic, Hindi, Chinese).</p>
+
+        <!-- ============================================================ -->
+        <!-- 🔧 FULL PIPELINE ARCHITECTURE -->
+        <!-- ============================================================ -->
+        <h2>🔧 Full Pipeline Architecture</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>📰 1. News & Theme Selection</h4>
+                <p>Web scraping + Gemini Grounding → extracts evergreen psychological hooks from current events.</p>
+                <span class="tech-badge">NewsAPI</span>
+                <span class="tech-badge">Gemini 2.5 Flash</span>
+                <span class="tech-badge">Web Search</span>
+            </div>
+            <div class="feature-card">
+                <h4>🧠 2. LLM Script Generation</h4>
+                <p>Mistral Large / GPT-4o / Gemini → generates 9-10 segments scripts with strict word count (13-16 words/segment) and empathy injection.</p>
+                <span class="tech-badge">Mistral Large</span>
+                <span class="tech-badge">GPT-4o-mini</span>
+                <span class="tech-badge">Chain of Thought</span>
+            </div>
+            <div class="feature-card">
+                <h4>🎙️ 3. AI Voiceover</h4>
+                <p>Google Text-to-Speech (Studio quality, 44.1kHz) → natural voices in 6 languages.</p>
+                <span class="tech-badge">Google TTS</span>
+                <span class="tech-badge">44.1kHz Stereo</span>
+            </div>
+            <div class="feature-card">
+                <h4>🎬 4. Dynamic B-roll</h4>
+                <p>Pexels/Pixabay integration → automatic video clips matching visual prompts.</p>
+                <span class="tech-badge">Pexels API</span>
+                <span class="tech-badge">Semantic Search</span>
+            </div>
+            <div class="feature-card">
+                <h4>📝 5. Subtitles</h4>
+                <p>Whisper + forced alignment → word-level timing, multi-language subtitles.</p>
+                <span class="tech-badge">Faster-Whisper</span>
+                <span class="tech-badge">FFmpeg</span>
+            </div>
+            <div class="feature-card">
+                <h4>🎨 6. Thumbnails</h4>
+                <p>Stable Diffusion + Mistral selection → 4 variants generated, human validation via Telegram bot.</p>
+                <span class="tech-badge">Stable Diffusion</span>
+                <span class="tech-badge">LLM Selection</span>
+            </div>
+            <div class="feature-card">
+                <h4>🤖 7. Telegram Bot</h4>
+                <p>Human-in-the-loop validation → approves thumbnails, schedules publications, monitors comments.</p>
+                <span class="tech-badge">Telegraf</span>
+                <span class="tech-badge">Webhooks</span>
+            </div>
+            <div class="feature-card">
+                <h4>📤 8. TikTok API</h4>
+                <p>Uploads videos directly to TikTok drafts. No manual intervention.</p>
+                <span class="tech-badge">TikTok API</span>
+                <span class="tech-badge">OAuth 2.0</span>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 🔄 STEP-BY-STEP FLOW -->
+        <!-- ============================================================ -->
+        <h2>🔄 Step-by-Step Automation Flow</h2>
+        
+        <div class="flow-step">
+            <div class="step-number">1</div>
+            <div class="step-content"><strong>News Ingestion</strong> — Daily news fetch → Gemini extracts evergreen psychological concepts.</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">2</div>
+            <div class="step-content"><strong>Theme Selection</strong> — Random pick from 60+ behavioral finance themes (Foundation, Momentum, Mastery levels).</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">3</div>
+            <div class="step-content"><strong>Script Generation</strong> — LLM writes script respecting:<br>
+            • 9-10 segments (Foundation=9, Momentum/Mastery=10)<br>
+            • 13-16 words per segment<br>
+            • Empathy phrase injected before CTA<br>
+            • Connecteurs logiques (unique per segment)<br>
+            • JSON output format</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">4</div>
+            <div class="step-content"><strong>Audio Generation</strong> — Google TTS produces voiceover at 44.1kHz + Whisper creates word-level timestamps.</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">5</div>
+            <div class="step-content"><strong>B-roll Assembly</strong> — Semantic search for clips matching visual prompts → downloaded and concatenated.</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">6</div>
+            <div class="step-content"><strong>Video Rendering</strong> — Remotion compositing (audio + b-roll + subtitles + thumbnail).</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">7</div>
+            <div class="step-content"><strong>Human Validation</strong> — Telegram bot sends 4 thumbnails for approval.</div>
+        </div>
+        <div class="flow-step">
+            <div class="step-number">8</div>
+            <div class="step-content"><strong>Publication</strong> — Video uploaded to TikTok API (draft) + YouTube (private).</div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 🛠️ TECHNICAL STACK -->
+        <!-- ============================================================ -->
+        <h2>🛠️ Technical Stack</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0;">
+            <span class="tech-badge">Python 3.12</span>
+            <span class="tech-badge">Node.js 20+</span>
+            <span class="tech-badge">Remotion</span>
+            <span class="tech-badge">Mistral AI</span>
+            <span class="tech-badge">OpenAI GPT-4o</span>
+            <span class="tech-badge">Google Gemini 2.5</span>
+            <span class="tech-badge">Google TTS</span>
+            <span class="tech-badge">Faster-Whisper</span>
+            <span class="tech-badge">Pexels API</span>
+            <span class="tech-badge">Pixabay API</span>
+            <span class="tech-badge">Telegram Bot API</span>
+            <span class="tech-badge">TikTok API</span>
+            <span class="tech-badge">YouTube API</span>
+            <span class="tech-badge">FFmpeg</span>
+            <span class="tech-badge">Stable Diffusion</span>
+            <span class="tech-badge">LangChain</span>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 🎯 WHAT WE NEED FROM TIKTOK API -->
+        <!-- ============================================================ -->
+        <h2>🎯 What We Need from TikTok API</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>✅ Video Upload</h4>
+                <p>Direct upload to TikTok drafts using <code>/v2/video/upload/</code> endpoint.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✅ OAuth 2.0 Authentication</h4>
+                <p>Secure user authorization via <code>https://www.tiktok.com/auth/authorize/</code>.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✅ Video Metadata</h4>
+                <p>Title, description, hashtags, privacy settings (draft/private).</p>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 🎬 SAMPLE OUTPUT -->
+        <!-- ============================================================ -->
+        <h2>🎬 Sample Video Output</h2>
+        <p>Each video includes:</p>
+        <ul style="margin-left: 24px; margin-bottom: 20px;">
+            <li>🎙️ AI voiceover (natural, multi-language)</li>
+            <li>📝 Word-level subtitles (karaoke style)</li>
+            <li>🎨 AI-generated thumbnail (4 variants, human-selected)</li>
+            <li>🎥 Dynamic B-roll matching the script</li>
+            <li>📊 Educational content about financial psychology</li>
+        </ul>
+        
+        <div style="background: #f0f2f5; padding: 20px; border-radius: 16px; text-align: center;">
+            <p style="color: #666;">📹 <strong>Example video (French)</strong> — "Le biais d'attention sélective en finance"</p>
+            <p style="color: #888; font-size: 14px;">YouTube Shorts (58s) | TikTok (60s) | YouTube Long (4min)</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- 🔗 LINKS -->
+        <!-- ============================================================ -->
+        <h2>🔗 Resources</h2>
+        <ul>
+            <li><a href="/buzzbit-policies/privacy.html">Privacy Policy</a> — GDPR compliant</li>
+            <li><a href="/buzzbit-policies/terms.html">Terms of Service</a> — usage guidelines</li>
+            <li><a href="https://t.me/BuzzbitBotTelegram">Telegram Bot</a> — human validation interface</li>
+            <li><a href="https://youtube.com/@BuzzBit-Mind">YouTube Channel</a> — published videos</li>
+        </ul>
+
+        <!-- ============================================================ -->
+        <!-- 📧 CONTACT -->
+        <!-- ============================================================ -->
+        <h2>📧 Developer Information</h2>
+        <div class="contact-grid">
+            <div>👨‍💻 <strong>Voltha Kiss</strong> — Full-stack AI Engineer</div>
+            <div>📧 <a href="mailto:volthakiss@gmail.com">volthakiss@gmail.com</a></div>
+            <div>🐙 <a href="https://github.com/volthakiss">github.com/volthakiss</a></div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 BuzzBit — Financial Psychology Education • Automated • Multilingual • Scalable</p>
+            <p style="font-size: 12px; margin-top: 8px;">Built with ❤️ for TikTok Developer Challenge</p>
+        </div>
+    </div>
+</body>
+</html>
